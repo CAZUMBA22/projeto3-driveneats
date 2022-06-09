@@ -36,6 +36,7 @@
     }
     .container_geral {
         margin-top: 130px;
+        margin-bottom: 110px;
     }
     .cards_pratos {
         display: flex;
