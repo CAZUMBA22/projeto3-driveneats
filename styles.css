@@ -66,6 +66,7 @@
         width: 172px;
         display: flex;
         justify-content: center;
+        position: ;
     }
     .caixa_img {
         position: absolute;
@@ -86,7 +87,7 @@
         font-size: 16px;
         color: #333333;
     }
-    .texto_nome_pedido:nth-child(2) {
+    .texto_nome_pedido:nth-child(3) {
         padding-bottom: px;
         font-weight: 300;
         font-size: 15px;
@@ -174,5 +175,18 @@
     .borda_select {
         border: 5px solid #32B72F;
         border-radius: 9px;
+    }
+    .desligado {
+        display: none;
+    }
+    .icone_ok {
+        color: #32B72F;
+        width: 25px;
+        right: 10px;
+        bottom: 15px;
+        position: absolute;
+    }
+    .botaoVerde {
+        background-color: #32B72F;
     }
 }
