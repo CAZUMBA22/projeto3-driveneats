@@ -91,11 +91,11 @@
             font-size: 16px;
             color: #333333;
         }
-        .texto_nome_pedido:nth-child(3),
-        .texto_nome_pedido_coca:nth-child(3),
+        .texto_nome_pedido p,
+        .texto_nome_pedido_coca p,
         .texto_nome_pedido_pudin p {
             font-weight: 300;
-            font-size: 18px;
+            font-size: 15px;
             color: #A6A6A6;
         }
         {
@@ -166,16 +166,19 @@
         .texto_nome_pedido_coca p {
             padding-top: 10px;
         }
-        .texto_nome_pedido_pudin {
+        .texto_nome_pedido_pudin,
+        .texto_nome_pedido_coca {
             width: 144px;
             bottom: 10px;
             position: absolute;
         }
-        .texto_nome_pedido_pudin p {
+        .texto_nome_pedido_pudin p,
+        .texto_nome_pedido_coca p {
             margin-top: 0px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
-        .texto_nome_pedido_pudin h2 {
+        .texto_nome_pedido_pudin h2,
+        texto_nome_pedido_coca h2 {
             margin-bottom: 10px;
             font-weight: 700;
             font-size: 16px;

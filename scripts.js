@@ -161,8 +161,6 @@ let endereco
 
 function fecharPedido() {
 
-    nome = prompt("Qual seu nome?")
-    endereco = prompt("Qual seu endereço?")
     let comida = document.querySelector(".c1 .borda_select h2")
     let bebida = document.querySelector(".c2 .borda_select h2")
     let doce = document.querySelector(".c3 .borda_select h2")
@@ -193,6 +191,9 @@ function fecharPedido() {
     valorTotalOk = (valorCOK + valorBOK + valorDOK)
 
     if (escolha1 && escolha2 && escolha3) {
+
+        nome = prompt("Qual seu nome?")
+        endereco = prompt("Qual seu endereço?")
         let liberado = document.querySelector(".desligado")
         liberado.classList.remove("desligado")
 
