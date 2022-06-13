@@ -173,14 +173,15 @@
         color: #A6A6A6;
     }
     .borda_select {
-        border: 5px solid #32B72F;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
         border-radius: 9px;
     }
     .desligado {
         display: none;
     }
     .icone_ok {
-        color: #32B72F;
+        color: #FFFFFF;
         width: 25px;
         right: 10px;
         bottom: 15px;
@@ -188,5 +189,8 @@
     }
     .botaoVerde {
         background-color: #32B72F;
+    }
+    .verde {
+        color: #32B72F;
     }
 }
