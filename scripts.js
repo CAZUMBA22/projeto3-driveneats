@@ -110,17 +110,49 @@ function tudoClicado() {
 
 }
 
+
+
 function fecharPedido() {
+    let comida = document.querySelector(".c1 .borda_select h2")
+    let bebida = document.querySelector(".c2 .borda_select h2")
+    let doce = document.querySelector(".c3 .borda_select h2")
+
+    let vComida = document.querySelector(".c1 .borda_select span")
+    let vBebida = document.querySelector(".c2 .borda_select span")
+    let vDoce = document.querySelector(".c3 .borda_select span")
+
+
+
     if (escolha1 && escolha2 && escolha3) {
+        let comidaOk = comida.innerHTML
+        let bebidaOk = bebida.innerHTML
+        let doceOk = doce.innerHTML
 
-        let msgPrato = c1.querySelector("h2").innerHTML;
-        let msgBebida = c2.querySelector("h2").innerHTML;
-        let msgSobremesa = c3.querySelector("h2").innerHTML;
+        let valorCOK = Number(vComida.innerHTML)
+        let valorBOK = Number(vBebida.innerHTML)
+        let valorDOK = Number(vDoce.innerHTML)
 
+        valorTotalOk = (valorCOK + valorBOK + valorDOK)
 
-        let msg = 'testestteste'
+        let compraZap = `
+    Olá, gostaria de fazer o pedido:
+    - Prato: ${comidaOk}
+    - Bebida: ${bebidaOk}
+    - Sobremesa: ${doceOk}
+    Total: R$ ${valorTotalOk.toFixed(2)}
+            `
 
+        const linkZap = compraZap;
+        const encodedlink = encodeURIComponent(linkZap, "_blank");
+        const allLink = "https://wa.me/5598992106666?text=" + `${encodedlink}`
 
-        location.assign(`https://wa.me/5598992106666?text=${msg}`);
+        openLink(allLink)
     }
+}
+
+
+
+
+function openLink(element) {
+    window.open(element);
 }

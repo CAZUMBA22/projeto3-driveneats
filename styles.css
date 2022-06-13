@@ -115,6 +115,8 @@
         background-color: #CBCBCB;
         width: 364px;
         height: 61px;
+        font-weight: 400;
+        font-size: 20px;
         border-radius: 50px;
         display: flex;
         justify-content: center;
