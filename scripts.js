@@ -110,9 +110,7 @@ function tudoClicado() {
 
 }
 
-
-
-function fecharPedido() {
+function finalizar() {
     let comida = document.querySelector(".c1 .borda_select h2")
     let bebida = document.querySelector(".c2 .borda_select h2")
     let doce = document.querySelector(".c3 .borda_select h2")
@@ -124,6 +122,7 @@ function fecharPedido() {
 
 
     if (escolha1 && escolha2 && escolha3) {
+
         let comidaOk = comida.innerHTML
         let bebidaOk = bebida.innerHTML
         let doceOk = doce.innerHTML
@@ -140,6 +139,9 @@ function fecharPedido() {
     - Bebida: ${bebidaOk}
     - Sobremesa: ${doceOk}
     Total: R$ ${valorTotalOk.toFixed(2)}
+
+    Nome: ${nome}
+    Endereço: ${endereco}
             `
 
         const linkZap = compraZap;
@@ -150,9 +152,64 @@ function fecharPedido() {
     }
 }
 
-
-
-
 function openLink(element) {
     window.open(element);
+}
+
+let nome
+let endereco
+
+function fecharPedido() {
+
+    nome = prompt("Qual seu nome?")
+    endereco = prompt("Qual seu endereço?")
+    let comida = document.querySelector(".c1 .borda_select h2")
+    let bebida = document.querySelector(".c2 .borda_select h2")
+    let doce = document.querySelector(".c3 .borda_select h2")
+
+    let vComida = document.querySelector(".c1 .borda_select span")
+    let vBebida = document.querySelector(".c2 .borda_select span")
+    let vDoce = document.querySelector(".c3 .borda_select span")
+
+    let comidaOk = comida.innerHTML
+    let bebidaOk = bebida.innerHTML
+    let doceOk = doce.innerHTML
+
+    let valorCOK = Number(vComida.innerHTML)
+    let valorBOK = Number(vBebida.innerHTML)
+    let valorDOK = Number(vDoce.innerHTML)
+
+    let Ecomida = document.querySelector(".comida h4")
+    let Pcomida = document.querySelector(".comida p")
+
+    let Ebebida = document.querySelector(".bebida h4")
+    let Pbebida = document.querySelector(".bebida p")
+
+    let Edoce = document.querySelector(".doce h4")
+    let Pdoce = document.querySelector(".doce p")
+
+    let Total = document.querySelector(".total h2")
+
+    valorTotalOk = (valorCOK + valorBOK + valorDOK)
+
+    if (escolha1 && escolha2 && escolha3) {
+        let liberado = document.querySelector(".desligado")
+        liberado.classList.remove("desligado")
+
+        Ecomida.innerHTML = `${comidaOk}`
+        Pcomida.innerHTML = `R$ ${valorCOK.toFixed(2)}`
+
+        Ebebida.innerHTML = `${bebidaOk}`
+        Pbebida.innerHTML = `R$ ${valorBOK.toFixed(2)}`
+
+        Edoce.innerHTML = `${doceOk}`
+        Pdoce.innerHTML = `R$ ${valorDOK.toFixed(2)}`
+
+        Total.innerHTML = `R$ ${valorTotalOk.toFixed(2)}`
+
+
+
+    }
+
+
 }

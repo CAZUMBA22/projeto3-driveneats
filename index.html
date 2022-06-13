@@ -14,6 +14,35 @@
 </head>
 
 <body>
+    <div class="confirmacaoPedido desligado">
+        <div class="opacidade">
+            <div class="caixaverde">
+                <h1>Confirme seu pedido</h1>
+                <div class="boxdescricao">
+                    <div class="diagramaComida comida">
+                        <h4>comida</h4>
+                        <p>preco</p>
+                    </div>
+                    <div class="diagramaComida bebida">
+                        <h4>bebida</h4>
+                        <p>preco</p>
+                    </div>
+                    <div class="diagramaComida doce">
+                        <h4>doce</h4>
+                        <p>preco</p>
+                    </div>
+                    <div class="diagramaComida total">
+                        <h4>Total</h4>
+                        <h2>preco</h2>
+                    </div>
+
+                </div>
+                <button class="botaoFinal" onclick="finalizar()"> <h3>Tudo certo, pode pedir!</h3></button>
+                <p class="cancelar">Cancelar</p>
+
+            </div>
+        </div>
+    </div>
     <div class="caixa_topo">
         <div class="topo">
             <div class="caixa_logo">
@@ -413,6 +442,7 @@
                 </div>
             </div>
         </div>
+
         <div class="barra_bottom">
             <div class="botao_next" onclick="fecharPedido()">
                 <p class="texto_next">Selecione os 3 itens para fechar o pedido</p>
